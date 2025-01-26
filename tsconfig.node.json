@@ -2,9 +2,9 @@
   "compilerOptions": {
     "composite": true,
     "declaration": true,
-    "declarationDir": "./types",  // Explicit declaration output
+    "declarationDir": "./types",
     "outDir": "./dist-node",
-    "rootDir": "./src",  // Focus on source directory
+    "rootDir": "./src", 
     "module": "ESNext",
     "moduleResolution": "node",
     "allowJs": true,
@@ -20,7 +20,7 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src/**/*.ts"],  // Narrow scope
+  "include": ["src/**/*.ts"], 
   "exclude": [
     "node_modules",
     "dist",
