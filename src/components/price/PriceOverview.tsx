@@ -7,221 +7,151 @@ interface PriceData {
   commercialPrice: number
   residentialChange: number
   commercialChange: number
-  trend: 'up' | 'down' | 'stable'
 }
 
 const areaData: PriceData[] = [
-  // Zone A - Near Core Capital
-  { area: "Mandadam", zone: "A", residentialPrice: 45000, commercialPrice: 65000, residentialChange: 2.5, commercialChange: 3.2, trend: 'up' },
-  { area: "Velagapudi", zone: "A", residentialPrice: 42000, commercialPrice: 62000, residentialChange: 2.1, commercialChange: 2.8, trend: 'up' },
-  { area: "Venkatapalem", zone: "A", residentialPrice: 40000, commercialPrice: 60000, residentialChange: 1.9, commercialChange: 2.5, trend: 'up' },
-  { area: "Uddandarayunipalem", zone: "A", residentialPrice: 38000, commercialPrice: 58000, residentialChange: 1.8, commercialChange: 2.3, trend: 'up' },
-  { area: "Lingayapalem", zone: "A", residentialPrice: 37000, commercialPrice: 57000, residentialChange: 1.7, commercialChange: 2.2, trend: 'up' },
-  
-  // Zone B - Happy Nest & High Court
-  { area: "Thulluru", zone: "B", residentialPrice: 35000, commercialPrice: 55000, residentialChange: 1.8, commercialChange: 2.1, trend: 'up' },
-  { area: "Nelapadu", zone: "B", residentialPrice: 33000, commercialPrice: 53000, residentialChange: 1.6, commercialChange: 1.9, trend: 'up' },
-  { area: "Inavolu", zone: "B", residentialPrice: 32000, commercialPrice: 52000, residentialChange: 1.5, commercialChange: 1.8, trend: 'stable' },
-  
-  // Zone C
-  { area: "Dondapadu", zone: "C", residentialPrice: 40000, commercialPrice: 60000, residentialChange: -0.5, commercialChange: 1.5, trend: 'down' },
-  { area: "Borupalem", zone: "C", residentialPrice: 38000, commercialPrice: 58000, residentialChange: -0.3, commercialChange: 1.3, trend: 'down' },
-  
+  // Zone A - Core Capital Region
+  { area: "Amaravati Central", zone: "A", residentialPrice: 45000, commercialPrice: 65000, residentialChange: 2.5, commercialChange: 3.2 },
+  { area: "Velagapudi", zone: "A", residentialPrice: 42000, commercialPrice: 62000, residentialChange: 2.1, commercialChange: 2.8 },
+  { area: "Rayapudi", zone: "A", residentialPrice: 40000, commercialPrice: 60000, residentialChange: 1.9, commercialChange: 2.5 },
+  { area: "Thullur", zone: "A", residentialPrice: 38000, commercialPrice: 58000, residentialChange: 1.8, commercialChange: 2.3 },
+  { area: "Nelapadu", zone: "A", residentialPrice: 37000, commercialPrice: 57000, residentialChange: 1.7, commercialChange: 2.2 },
+
+  // Zone B - Mangalagiri Region
+  { area: "Mangalagiri Central", zone: "B", residentialPrice: 35000, commercialPrice: 55000, residentialChange: 1.8, commercialChange: 2.1 },
+  { area: "Navuluru", zone: "B", residentialPrice: 33000, commercialPrice: 53000, residentialChange: 1.6, commercialChange: 1.9 },
+  { area: "Bethapudi", zone: "B", residentialPrice: 32000, commercialPrice: 52000, residentialChange: 1.5, commercialChange: 1.8 },
+  { area: "Chinakakani", zone: "B", residentialPrice: 31000, commercialPrice: 51000, residentialChange: 1.4, commercialChange: 1.7 },
+  { area: "Tadepalli", zone: "B", residentialPrice: 34000, commercialPrice: 54000, residentialChange: 1.7, commercialChange: 2.0 },
+
+  // Zone C - Vijayawada Region
+  { area: "Vijayawada Central", zone: "C", residentialPrice: 40000, commercialPrice: 60000, residentialChange: -0.5, commercialChange: 1.5 },
+  { area: "Gollapudi", zone: "C", residentialPrice: 38000, commercialPrice: 58000, residentialChange: -0.3, commercialChange: 1.3 },
+  { area: "Gannavaram", zone: "C", residentialPrice: 36000, commercialPrice: 56000, residentialChange: -0.2, commercialChange: 1.2 },
+  { area: "Ramavarappadu", zone: "C", residentialPrice: 35000, commercialPrice: 55000, residentialChange: -0.1, commercialChange: 1.1 },
+  { area: "Gunadala", zone: "C", residentialPrice: 34000, commercialPrice: 54000, residentialChange: -0.4, commercialChange: 1.0 },
+
   // Zone D - Guntur Region
-  { area: "Neerukonda", zone: "D", residentialPrice: 30000, commercialPrice: 50000, residentialChange: 1.2, commercialChange: 1.8, trend: 'up' },
-  { area: "Kuragallu", zone: "D", residentialPrice: 28000, commercialPrice: 48000, residentialChange: 1.0, commercialChange: 1.6, trend: 'stable' }
-]
+  { area: "Guntur Central", zone: "D", residentialPrice: 30000, commercialPrice: 50000, residentialChange: 1.2, commercialChange: 1.8 },
+  { area: "Nallapadu", zone: "D", residentialPrice: 28000, commercialPrice: 48000, residentialChange: 1.0, commercialChange: 1.6 },
+  { area: "Pedakakani", zone: "D", residentialPrice: 27000, commercialPrice: 47000, residentialChange: 0.9, commercialChange: 1.5 },
+  { area: "Gorantla", zone: "D", residentialPrice: 26000, commercialPrice: 46000, residentialChange: 0.8, commercialChange: 1.4 },
+  { area: "Etukuru", zone: "D", residentialPrice: 25000, commercialPrice: 45000, residentialChange: 0.7, commercialChange: 1.3 },
+
+  // Zone E - Peripheral Areas
+  { area: "Tenali", zone: "E", residentialPrice: 24000, commercialPrice: 44000, residentialChange: 0.6, commercialChange: 1.2 },
+  { area: "Sattenapalli", zone: "E", residentialPrice: 22000, commercialPrice: 42000, residentialChange: 0.5, commercialChange: 1.1 },
+  { area: "Ponnuru", zone: "E", residentialPrice: 21000, commercialPrice: 41000, residentialChange: 0.4, commercialChange: 1.0 },
+  { area: "Chilakaluripet", zone: "E", residentialPrice: 20000, commercialPrice: 40000, residentialChange: 0.3, commercialChange: 0.9 },
+  { area: "Bapatla", zone: "E", residentialPrice: 19000, commercialPrice: 39000, residentialChange: 0.2, commercialChange: 0.8 },
+
+  // Zone F - Growth Corridor
+  { area: "Nuzvid", zone: "F", residentialPrice: 18000, commercialPrice: 38000, residentialChange: 0.1, commercialChange: 0.7 },
+  { area: "Gudivada", zone: "F", residentialPrice: 17000, commercialPrice: 37000, residentialChange: 0.0, commercialChange: 0.6 },
+  { area: "Vuyyuru", zone: "F", residentialPrice: 16000, commercialPrice: 36000, residentialChange: -0.1, commercialChange: 0.5 },
+  { area: "Avanigadda", zone: "F", residentialPrice: 15000, commercialPrice: 35000, residentialChange: -0.2, commercialChange: 0.4 }
+];
 
 function PriceOverview() {
-  const [selectedZone, setSelectedZone] = useState<string>('all')
-  const [sortConfig, setSortConfig] = useState<{ key: keyof PriceData; direction: 'asc' | 'desc' } | null>(null)
+  const [selectedZone, setSelectedZone] = useState('all')
 
   const filteredData = selectedZone === 'all' 
     ? areaData 
     : areaData.filter(item => item.zone === selectedZone)
 
-  const sortedData = [...filteredData].sort((a, b) => {
-    if (!sortConfig) return 0
-    
-    const aValue = a[sortConfig.key]
-    const bValue = b[sortConfig.key]
-    
-    if (aValue < bValue) return sortConfig.direction === 'asc' ? -1 : 1
-    if (aValue > bValue) return sortConfig.direction === 'asc' ? 1 : -1
-    return 0
-  })
-
-  const handleSort = (key: keyof PriceData) => {
-    setSortConfig(current => ({
-      key,
-      direction: current?.key === key && current.direction === 'asc' ? 'desc' : 'asc'
-    }))
-  }
-
-  const TrendIcon = ({ trend }: { trend: 'up' | 'down' | 'stable' }) => {
-    if (trend === 'up') {
-      return <span className="text-green-500">↑</span>
-    }
-    if (trend === 'down') {
-      return <span className="text-red-500">↓</span>
-    }
-    return <span className="text-gray-500">→</span>
-  }
-
   return (
-    <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+    <div className="bg-white rounded-lg shadow-xl">
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-800 p-6 text-white">
+      <div className="p-6 border-b border-gray-100">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div>
-            <h2 className="text-3xl font-bold">Market Overview</h2>
-            <p className="mt-2 opacity-90">Real-time property rates in Amaravati Capital Region</p>
+            <h2 className="text-2xl font-bold text-gray-800">Market Overview</h2>
+            <p className="text-gray-500 mt-1">Real-time property rates in Amaravati Capital Region</p>
           </div>
           <div className="flex items-center gap-4">
             <select 
               value={selectedZone}
               onChange={(e) => setSelectedZone(e.target.value)}
-              className="px-4 py-2 bg-white text-gray-900 rounded-lg border border-white/20 focus:outline-none focus:ring-2 focus:ring-white/50"
-              style={{ WebkitAppearance: 'menulist' }}
+              className="px-4 py-2 border border-gray-200 rounded-lg text-gray-700 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
-              <option value="all" className="text-gray-900">All Zones</option>
-              <option value="A" className="text-gray-900">Zone A - Core Capital</option>
-              <option value="B" className="text-gray-900">Zone B - Mangalagiri</option>
-              <option value="C" className="text-gray-900">Zone C - Vijayawada</option>
-              <option value="D" className="text-gray-900">Zone D - Guntur</option>
+              <option value="all">All Zones</option>
+              <option value="A">Zone A - Core Capital</option>
+              <option value="B">Zone B - Mangalagiri</option>
+              <option value="C">Zone C - Vijayawada</option>
+              <option value="D">Zone D - Guntur</option>
+              <option value="E">Zone E - Peripheral</option>
+              <option value="F">Zone F - Growth Corridor</option>
             </select>
           </div>
         </div>
       </div>
 
       {/* Stats Overview */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 p-6 bg-gray-50">
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-          <div className="text-sm font-medium text-gray-500 mb-1">Average Residential</div>
-          <div className="text-2xl font-bold text-gray-900">₹32,500/sq.yd</div>
-          <div className="flex items-center gap-1 mt-2">
-            <span className="text-green-500">↑</span>
-            <span className="text-sm font-medium text-green-600">+1.2%</span>
-          </div>
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 p-6 bg-gray-50">
+        <div className="bg-white p-4 rounded-lg shadow">
+          <div className="text-sm text-gray-500">Average Residential</div>
+          <div className="text-xl font-bold text-gray-800 mt-1">₹32,500/sq.yd</div>
+          <div className="text-sm text-green-600 mt-1">+1.2% ↑</div>
         </div>
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-          <div className="text-sm font-medium text-gray-500 mb-1">Average Commercial</div>
-          <div className="text-2xl font-bold text-gray-900">₹52,800/sq.yd</div>
-          <div className="flex items-center gap-1 mt-2">
-            <span className="text-green-500">↑</span>
-            <span className="text-sm font-medium text-green-600">+1.8%</span>
-          </div>
+        <div className="bg-white p-4 rounded-lg shadow">
+          <div className="text-sm text-gray-500">Average Commercial</div>
+          <div className="text-xl font-bold text-gray-800 mt-1">₹52,800/sq.yd</div>
+          <div className="text-sm text-green-600 mt-1">+1.8% ↑</div>
         </div>
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-          <div className="text-sm font-medium text-gray-500 mb-1">Monthly Volume</div>
-          <div className="text-2xl font-bold text-gray-900">₹2.8B</div>
-          <div className="flex items-center gap-1 mt-2">
-            <span className="text-green-500">↑</span>
-            <span className="text-sm font-medium text-green-600">+0.5%</span>
-          </div>
+        <div className="bg-white p-4 rounded-lg shadow">
+          <div className="text-sm text-gray-500">Total Volume</div>
+          <div className="text-xl font-bold text-gray-800 mt-1">₹2.8B</div>
+          <div className="text-sm text-green-600 mt-1">+0.5% ↑</div>
         </div>
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-          <div className="text-sm font-medium text-gray-500 mb-1">Market Activity</div>
-          <div className="text-2xl font-bold text-gray-900">426 Deals</div>
-          <div className="flex items-center gap-1 mt-2">
-            <span className="text-green-500">↑</span>
-            <span className="text-sm font-medium text-green-600">+12</span>
-          </div>
+        <div className="bg-white p-4 rounded-lg shadow">
+          <div className="text-sm text-gray-500">Market Activity</div>
+          <div className="text-xl font-bold text-gray-800 mt-1">426 Deals</div>
+          <div className="text-sm text-green-600 mt-1">+12 ↑</div>
         </div>
       </div>
 
-      {/* Price Table */}
+      {/* Table */}
       <div className="overflow-x-auto">
         <table className="w-full">
           <thead>
-            <tr className="bg-gray-50 border-y border-gray-100">
-              <th className="px-6 py-4 text-left">
-                <button 
-                  onClick={() => handleSort('area')}
-                  className="flex items-center gap-2 text-sm font-semibold text-gray-600 hover:text-gray-900"
-                >
-                  Area & Zone
-                  {sortConfig?.key === 'area' && (
-                    <span>{sortConfig.direction === 'asc' ? '↑' : '↓'}</span>
-                  )}
-                </button>
-              </th>
-              <th className="px-6 py-4">
-                <button 
-                  onClick={() => handleSort('residentialPrice')}
-                  className="flex items-center gap-2 text-sm font-semibold text-gray-600 hover:text-gray-900"
-                >
-                  Residential (₹/sq.yd)
-                  {sortConfig?.key === 'residentialPrice' && (
-                    <span>{sortConfig.direction === 'asc' ? '↑' : '↓'}</span>
-                  )}
-                </button>
-              </th>
-              <th className="px-6 py-4 text-sm font-semibold text-gray-600">24h Change</th>
-              <th className="px-6 py-4">
-                <button 
-                  onClick={() => handleSort('commercialPrice')}
-                  className="flex items-center gap-2 text-sm font-semibold text-gray-600 hover:text-gray-900"
-                >
-                  Commercial (₹/sq.yd)
-                  {sortConfig?.key === 'commercialPrice' && (
-                    <span>{sortConfig.direction === 'asc' ? '↑' : '↓'}</span>
-                  )}
-                </button>
-              </th>
-              <th className="px-6 py-4 text-sm font-semibold text-gray-600">24h Change</th>
-              <th className="px-6 py-4 text-sm font-semibold text-gray-600">Trend</th>
+            <tr className="bg-gray-50">
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Area</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Residential (₹/sq.yd)</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">24h Change</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Commercial (₹/sq.yd)</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">24h Change</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-100">
-            {sortedData.map((item, index) => (
-              <tr 
-                key={index} 
-                className="hover:bg-blue-50/50 transition-colors group"
-              >
+            {filteredData.map((item, index) => (
+              <tr key={index} className="hover:bg-gray-50">
                 <td className="px-6 py-4">
-                  <div className="flex items-center gap-3">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-semibold">
-                      {item.zone}
-                    </div>
-                    <div>
-                      <div className="font-medium text-gray-900">{item.area}</div>
-                      <div className="text-sm text-gray-500">Zone {item.zone}</div>
-                    </div>
-                  </div>
+                  <div className="text-sm font-medium text-gray-900">{item.area}</div>
+                  <div className="text-xs text-gray-500">Zone {item.zone}</div>
                 </td>
-                <td className="px-6 py-4 text-center">
-                  <span className="font-medium text-gray-900">
-                    ₹{item.residentialPrice.toLocaleString()}
-                  </span>
+                <td className="px-6 py-4 text-sm text-gray-900">
+                  ₹{item.residentialPrice.toLocaleString()}
                 </td>
                 <td className="px-6 py-4">
-                  <div className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                  <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
                     item.residentialChange >= 0 
                       ? 'bg-green-100 text-green-800' 
                       : 'bg-red-100 text-red-800'
                   }`}>
                     {item.residentialChange >= 0 ? '+' : ''}{item.residentialChange}%
-                  </div>
-                </td>
-                <td className="px-6 py-4 text-center">
-                  <span className="font-medium text-gray-900">
-                    ₹{item.commercialPrice.toLocaleString()}
                   </span>
                 </td>
+                <td className="px-6 py-4 text-sm text-gray-900">
+                  ₹{item.commercialPrice.toLocaleString()}
+                </td>
                 <td className="px-6 py-4">
-                  <div className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                  <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
                     item.commercialChange >= 0 
                       ? 'bg-green-100 text-green-800' 
                       : 'bg-red-100 text-red-800'
                   }`}>
                     {item.commercialChange >= 0 ? '+' : ''}{item.commercialChange}%
-                  </div>
-                </td>
-                <td className="px-6 py-4">
-                  <div className="flex items-center justify-center">
-                    <TrendIcon trend={item.trend} />
-                  </div>
+                  </span>
                 </td>
               </tr>
             ))}
@@ -230,15 +160,10 @@ function PriceOverview() {
       </div>
 
       {/* Footer */}
-      <div className="p-6 border-t border-gray-100 bg-gray-50">
-        <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-green-500"></span>
-            <span>Last updated: {new Date().toLocaleString()}</span>
-          </div>
-          <div className="mt-2 md:mt-0 text-xs">
-            * Prices are indicative and subject to market conditions
-          </div>
+      <div className="p-6 border-t border-gray-100">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center text-sm text-gray-500">
+          <div>Last updated: {new Date().toLocaleDateString()}</div>
+          <div className="mt-2 md:mt-0">* Prices are indicative and subject to market conditions</div>
         </div>
       </div>
     </div>
