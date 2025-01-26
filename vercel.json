@@ -1,8 +1,8 @@
 {
   "build": {
-    "output": "dist"
-  },
-  "buildCommand": "npm run build",
-  "installCommand": "npm install",
-  "framework": "vite"
+    "output": "dist",
+    "env": {
+      "NODE_ENV": "production"
+    }
+  }
 }
