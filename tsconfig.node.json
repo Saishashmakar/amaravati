@@ -2,19 +2,11 @@
   "compilerOptions": {
     "composite": true,
     "declaration": true,
+    "declarationDir": "./types", // Add this line
     "outDir": "./dist-node",
-    "rootDir": ".",
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "allowJs": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": false,
-    "lib": ["ES2020"],
-    "types": ["node"]
+    "rootDir": "./src", // Point to source directory
+    // ... rest of your config
   },
-  "include": ["**/*.ts"],
-  "exclude": ["node_modules", "dist-node"]
+  "include": ["src/**/*.ts"], // Narrow scope
+  "exclude": ["node_modules", "dist"]
 }
