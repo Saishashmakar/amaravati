@@ -2,11 +2,30 @@
   "compilerOptions": {
     "composite": true,
     "declaration": true,
-    "declarationDir": "./types", // Add this line
+    "declarationDir": "./types",  // Explicit declaration output
     "outDir": "./dist-node",
-    "rootDir": "./src", // Point to source directory
-    // ... rest of your config
+    "rootDir": "./src",  // Focus on source directory
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": false,
+    "lib": ["ES2020"],
+    "types": ["node"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
-  "include": ["src/**/*.ts"], // Narrow scope
-  "exclude": ["node_modules", "dist"]
+  "include": ["src/**/*.ts"],  // Narrow scope
+  "exclude": [
+    "node_modules",
+    "dist",
+    "dist-node",
+    "public",
+    "**/*.spec.ts"
+  ]
 }
